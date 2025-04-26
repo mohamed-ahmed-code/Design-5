@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logoo.png" type="image/png">
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&family=Harmattan:wght@400;500;600;700&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <title>MyU</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="login-box">
+                    <div class="login-content">
+                        <div class="login-logo">
+                            <img src="./images/logoo.png" alt="Logo" class="logo" style="width: 180px; margin-top: 20px;">
+                        </div>
+                        <h3 class="text1">بوابة الخدمات الطلابية</h3 style="font-size: 20px;">
+                            <h4 class="text2">نظام ابن الهيثم - جامعة المنصورة</h4>
+                    </div>
+                    <div class="login-form">
+                        <form action="login.php" method="POST">
+                            <div class="form-group">
+                                <div class="username">
+                                <label for="username"></label>
+                                <i class='bx bx-user bx-flip-horizontal' id="login"></i>
+                                <input type="text" name="username" id="username" required placeholder="اسم المستخدم" class="form-control" style="height: 30px;">
+                                </div>
+                                <div class="password">
+                                <label for="password"></label>
+                                <i class='bx bx-lock' id="pass"></i>
+                                <input type="password" name="password" id="password" required placeholder="كلمة المرور" class="form-control" style="height: 30px;">
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary" id="submit" onclick="validateLogin()">تسجيل الدخول</button>
+                                    <p id="error-message" style="color: red; display: none;">خطأ: اسم المستخدم أو كلمة المرور غير صحيحة</p>
+                                    <script>
+                                        function validateLogin() {
+                                            const username = document.getElementById('username').value;
+                                            const password = document.getElementById('password').value;
+                                            const errorMessage = document.getElementById('error-message');
+
+                                            if (username === '816615841' && password === '30608081202098') {
+                                                window.location.href = './النتيجه/index.html';
+                                            } else {
+                                                errorMessage.style.display = 'block';
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                                <div>
+                                    <h4 class="text3"><a href="reset_password.php">نسيت كلمة المرور</a></h4>
+                                </div>
+                                <div class="defence">
+                                    <h4 class="text4"><i class='bx bx-shield-quarter' ></i> سياسة خصوصية وتأمين البيانات</h4>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="footer-text">جميع الحقوق محفوظة &copy; 2025 جامعة المنصورة</p>
+</body>
+</html>
